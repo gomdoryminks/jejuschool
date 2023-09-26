@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>      
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta property="og:url" content="">
+        <meta property="og:title" content="안전통학 정보 서비스">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="http://jeju.specialschoolbus.com/school/assets/img/apple-touch-icon.png">
+        <meta property="og:description" content="안전통학 정보 서비스">
+        <title>안전통학 정보 서비스</title>
+        <meta name="description" content="안전통학 정보 서비스">
+        <meta name="author" content="minks">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+        
+        <!-- Google Fonts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+        <script>
+          WebFont.load({
+            google: {"families":["Montserrat:400,500,600,700","Noto+Sans:400,700"]},
+            active: function() {
+                sessionStorage.fonts = true;
+            }
+          });
+        </script>
+        
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="assets/img/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+        
+        <!-- Stylesheet -->
+        <link type="text/css" rel="stylesheet" href="assets/css/new-reset.css">
+        <link type="text/css" rel="stylesheet" href="assets/vendors/css/base/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="assets/vendors/css/base/elisyam-1.5.min.css">
+        <link type="text/css" rel="stylesheet" href="assets/css/datepicker/bootstrap-datepicker3.css">
+        <link type="text/css" rel="stylesheet" href="assets/css/spectrum.css">
+        <link type="text/css" rel="stylesheet" href="assets/css/main.css">
+        <link type="text/css" rel="stylesheet" href="assets/css/new-main.css">
+        
+        <!-- Tweaks for older IEs-->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        
+        <!-- Begin Vendor Js -->
+        <script src="assets/vendors/js/base/jquery.min.js"></script>
+        <script src="assets/js/jquery-ui-sortable.js"></script>
+        <script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+        <script src="assets/vendors/js/base/core.js"></script>
+        <!-- End Vendor Js -->
+        
+        <!-- Begin Page Vendor Js -->
+        <script src="assets/vendors/js/nicescroll/nicescroll.min.js"></script>
+        <script src="assets/vendors/js/chart/chart.js"></script>
+        <script src="assets/vendors/js/chart/chartjs-adapter-date-fns.bundle.min.js"></script>
+        <script src="assets/vendors/js/datepicker/moment.min.js"></script>
+        <script src="assets/vendors/js/datepicker/moment-with-locales.js"></script>
+        <script src="assets/vendors/js/datepicker/bootstrap-datepicker.js"></script>
+        <script src="assets/vendors/js/datepicker/bootstrap-datepicker.ko.min.js"></script>
+        <script src="assets/vendors/js/app/app.js"></script>
+        <!-- End Page Vendor Js -->
+        
+        <!-- Begin Page Snippets -->
+        <script src="assets/js/components/validation/validation.js"></script>
+        <script src="assets/js/components/datepicker/datepicker.js"></script>
+        <script src="assets/js/spectrum.js"></script>
+        <script src="assets/js/reset.js"></script>
+        <script src="assets/js/main.js"></script>
+        <!-- End Page Snippets -->
+    </head>
+    <body id="page-top" class="newTheme">
+        <!-- Begin Preloader -->
+        <div id="preloader">
+            <div class="canvas">
+                <img src="assets/img/logo.png" alt="logo" class="loader-logo">
+                <div class="spinner"></div>   
+            </div>
+        </div>
+        <!-- End Preloader -->
+        
+        <div class="page">
+            <!-- Begin Header -->
+            <header id="header" class="header">
+                <nav class="navbar fixed-top">         
+                    <!-- Begin Topbar -->
+                    <div class="navbar-holder d-flex align-items-center align-middle justify-content-between">
+                        <!-- Begin Logo -->
+                        <div class="navbar-header">
+                            <a href="new-index.html" class="navbar-brand">
+                                <div class="brand-image">
+                                    <img src="assets/img/logo-big.png" alt="logo" class="logo-big">
+                                </div>
+                            </a>
+                        </div>
+                        <!-- End Logo -->
+
+                        <!-- Begin Navbar Menu -->
+                        <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center pull-right">
+                            <li class="nav-item dropdown mr-2 nav-title">
+                                <span class="sess-school-name">제주영송학교</span>
+                            </li>
+
+                            <!-- Begin User -->
+                            <li class="nav-item dropdown">
+                                <a id="user" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
+                                    <img src="assets/img/avatar/avatar-01.jpg" alt="..." class="avatar rounded-circle sess-user-img">
+                                </a>
+                                <ul aria-labelledby="user" class="user-size dropdown-menu">
+                                    <li class="welcome">
+                                        <a href="#" class="edit-profil" id="sess-user-link">
+                                            <i class="la la-gear"></i>
+                                        </a>
+                                        <img src="assets/img/avatar/avatar-01.jpg" alt="..." class="rounded-circle sess-user-img">
+                                    </li>
+                                    <li class="userinfo">
+                                        <a href="#" class="dropdown-item"> 
+                                            <span id="sess-user-name">학교관리자</span> 님
+                                        </a>
+                                    </li>
+                                    <li class="userinfo">
+                                        <a href="#" class="dropdown-item"> 
+                                            <span class="sess-school-name">제주영송학교</span>
+                                        </a>
+                                    </li>
+                                    <li class="separator"></li>
+                                    <li>
+                                        <a rel="nofollow" href="javascript:void(0);" class="dropdown-item logout text-center" onclick="location.href='new-login.html';">
+                                            <i class="ti-power-off"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- End User -->
+                        </ul>
+                        <!-- End Navbar Menu -->
+                    </div>
+                    <!-- End Topbar -->
+                </nav>
+            </header>
+            <!-- End Header -->
+            
+            <!-- Begin Page Content -->
+            <div class="page-content d-flex align-items-stretch">
+                <!-- Begin Left Sidebar -->
+                <div id="nav" class="default-sidebar">
+                    <!-- Begin Side Navbar -->
+                    <nav class="side-navbar box-scroll sidebar-scroll">
+                        <!-- Begin Main Navigation -->
+                        <ul class="list-unstyled">
+                            <li><a href="new-user-list.html" data-menu="user"><i class="la la-user"></i><span>계정 관리</span></a></li>
+                            <li><a href="new-school-list.html" data-menu="school"><i class="la la-university"></i><span>학교 관리</span></a></li>
+                            <li><a href="new-bus-list.html" data-menu="bus"><i class="la la-bus"></i><span>버스 관리</span></a></li>
+                            <li><a href="new-student-list.html" data-menu="student"><i class="la la-child"></i><span>학생 관리</span></a></li>
+                            <li><a href="new-survey-list.html" data-menu="survey"><i class="la la-clipboard"></i><span>설문조사 관리</span></a></li>
+                            <li>
+                                <a href="#dropdown-board" aria-expanded="false" data-toggle="collapse"><i class="la la-file-text"></i><span>게시판 관리</span></a>
+                                <ul id="dropdown-board" class="collapse list-unstyled pt-0">
+                                    <li><a href="new-notice-list.html" data-menu="notice">공지사항 관리</a></li>
+                                    <li><a href="new-faq-list.html" data-menu="faq">FAQ 관리</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="new-msgsend-list.html" data-menu="msgsend"><i class="la la-send-o"></i><span>문자발송 관리</span></a></li>
+                            <li><a href="new-stats-list.html" data-menu="stats"><i class="la la-bar-chart"></i><span>통계 관리</span></a></li>
+                            <li><a href="new-log-list.html" data-menu="log"><i class="la la-clock-o"></i><span>로그 관리</span></a></li>
+                        </ul>
+                        <!-- End Main Navigation -->
+                    </nav>
+                    <!-- End Side Navbar -->
+                </div>
+                <!-- End Left Sidebar -->
+                
+                <!-- Begin Content -->
+                <div class="content-inner">
+                    <!-- Begin Container -->
+                    <div class="container-fluid">
+                        <!-- Begin Page Header-->
+                        <div class="row">
+                            <div class="page-header">
+	                            <div class="d-flex align-items-center">
+	                                <h2 class="page-header-title">공지사항 관리</h2>
+	                                <div>
+			                            <ul class="breadcrumb">
+			                                <li class="breadcrumb-item"><a href="new-index.html"><i class="ti ti-home"></i></a></li>
+			                                <li class="breadcrumb-item active">공지사항 관리</li>
+			                            </ul>
+	                                </div>
+	                            </div>
+                            </div>
+                        </div>
+                        <!-- End Page Header -->
+                        
+                        <!-- Begin Row -->
+                        <div class="row">
+                            <div class="col">
+                                <!-- page-write-area : 작성 페이지 -->
+                                <div class="widget has-shadow mb-0 page-write-area">
+                                    <div class="widget-body">
+                                        <div class="row align-items-center mb-3">
+                                            <div class="col d-flex">
+                                                <div class="table-title">
+                                                    <b>공지사항 추가</b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <form id="" name="" method="" action="">
+                                            <div class="table-responsive table-fixed mb-3">
+                                                <table class="table table-bordered mb-0">
+                                                    <colgroup>
+                                                        <col width="140">
+                                                        <col width="*">
+                                                        <col width="140">
+                                                        <col width="*">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>종류 *</th>
+                                                            <td class="text-left">
+                                                                <select id="" name="" class="custom-select form-control" required>
+                                                                    <option value="일반">일반</option>
+                                                                    <option value="긴급">긴급</option>
+                                                                </select>
+                                                                <div class="invalid-feedback">종류를 선택해주세요.</div>
+                                                            </td>
+                                                            <th>노출상태 *</th>
+                                                            <td class="text-left">
+                                                                <select id="" name="" class="custom-select form-control" required>
+                                                                    <option value="노출">노출</option>
+                                                                    <option value="노출안함">노출안함</option>
+                                                                </select>
+                                                                <div class="invalid-feedback">노출상태를 선택해주세요.</div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>제목 *</th>
+                                                            <td colspan="3" class="text-left">
+                                                                <input type="text" id="" name="" class="form-control" required>
+                                                                <div class="invalid-feedback">제목을 입력해주세요.</div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>내용</th>
+                                                            <td colspan="3" class="text-left">
+                                                                <textarea id="" name="" class="form-control">SmartEditor 사용</textarea>
+                                                                <div class="invalid-feedback">내용을 입력해주세요.</div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>첨부파일1</th>
+                                                            <td colspan="3" class="text-left">
+                                                                <div class="form-group d-flex">
+                                                                    <div class="file-group">
+                                                                        <input type="text" id="" name="" class="form-control" readonly>
+                                                                        <label class="file-control-btn">
+                                                                            <input type="file" id="" name="" class="file-control">
+                                                                            <span class="file-control-text">파일선택</span>
+                                                                        </label>
+                                                                        <div class="invalid-feedback">파일을 선택해주세요.</div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>첨부파일2</th>
+                                                            <td colspan="3" class="text-left">
+                                                                <div class="form-group d-flex">
+                                                                    <div class="file-group">
+                                                                        <input type="text" id="" name="" class="form-control" readonly>
+                                                                        <label class="file-control-btn">
+                                                                            <input type="file" id="" name="" class="file-control">
+                                                                            <span class="file-control-text">파일선택</span>
+                                                                        </label>
+                                                                        <div class="invalid-feedback">파일을 선택해주세요.</div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>첨부파일3</th>
+                                                            <td colspan="3" class="text-left">
+                                                                <div class="form-group d-flex">
+                                                                    <div class="file-group">
+                                                                        <input type="text" id="" name="" class="form-control" readonly>
+                                                                        <label class="file-control-btn">
+                                                                            <input type="file" id="" name="" class="file-control">
+                                                                            <span class="file-control-text">파일선택</span>
+                                                                        </label>
+                                                                        <div class="invalid-feedback">파일을 선택해주세요.</div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            
+                                            <div class="d-flex justify-content-center">
+                                                <button type="button" class="btn btn-style01 btn-lg ml-2 mr-2" onclick=""><span>확인</span></button>
+                                                <button type="button" class="btn btn-lg ml-2 mr-2" onclick="history.back();"><span>취소</span></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Row -->
+                    </div>
+                    <!-- End Container -->
+                    
+                    <!-- Begin Page Footer-->
+                    <footer id="footer" class="main-footer">
+                        <div class="row">
+                            <div class="col d-flex align-items-center justify-content-start">
+                                <p>© 안전통학 정보 서비스. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- End Page Footer -->
+                    
+                    <!-- Begin Go Top -->
+                    <a href="#" class="go-top"><i class="la la-arrow-up"></i></a>
+                    <!-- End Go Top -->
+                </div>
+                <!-- End Content -->
+            </div>
+            <!-- End Page Content -->
+        </div>
+        
+        <!-- Begin Modal -->
+        <div id="modal">
+            <!-- Begin Centered Modal (Alert) -->
+            <div id="modal-centered-alert" class="modal fade modal-centered-default">
+                <div class="modal-background"></div>
+                <div class="modal-dialog modal-sm modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="modal-body-text mt-3 mb-3"></div>
+                        </div>
+                        <div class="modal-footer justify-content-center p-0">
+                            <button type="button" class="btn btn-style01 w-100 m-0 btn-confirm" data-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" id="modal-centered-alert-btn" class="btn btn-hidden" data-toggle="modal" data-target="#modal-centered-alert">보기</button>
+            <!-- End Centered Modal (Alert) -->
+
+            <!-- Begin Centered Modal (Confirm) -->
+            <div id="modal-centered-confirm" class="modal fade modal-centered-default">
+                <div class="modal-background"></div>
+                <div class="modal-dialog modal-sm modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="modal-body-text mt-3 mb-3"></div>
+                        </div>
+                        <div class="modal-footer justify-content-center p-0">
+                            <button type="button" class="btn btn-style01 w-50 m-0 btn-confirm" data-dismiss="modal">확인</button>
+                            <button type="button" class="btn btn-style03 w-50 m-0 btn-cancel" data-dismiss="modal">취소</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" id="modal-centered-confirm-btn" class="btn btn-hidden" data-toggle="modal" data-target="#modal-centered-confirm">보기</button>
+            <!-- End Centered Modal (Confirm) -->
+        </div>
+        <!-- End Modal -->
+    </body>
+</html>

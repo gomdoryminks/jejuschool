@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>      
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta property="og:url" content="">
+        <meta property="og:title" content="안전통학 정보 서비스">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="http://jeju.specialschoolbus.com/school/assets/img/apple-touch-icon.png">
+        <meta property="og:description" content="안전통학 정보 서비스">
+        <title>안전통학 정보 서비스</title>
+        <meta name="description" content="안전통학 정보 서비스">
+        <meta name="author" content="minks">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+        
+        <!-- Google Fonts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+        <script>
+          WebFont.load({
+            google: {"families":["Montserrat:400,500,600,700","Noto+Sans:400,700"]},
+            active: function() {
+                sessionStorage.fonts = true;
+            }
+          });
+        </script>
+        
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="assets/img/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+        
+        <!-- Stylesheet -->
+        <link type="text/css" rel="stylesheet" href="assets/css/new-reset.css">
+        <link type="text/css" rel="stylesheet" href="assets/vendors/css/base/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="assets/vendors/css/base/elisyam-1.5.min.css">
+        <link type="text/css" rel="stylesheet" href="assets/css/datepicker/bootstrap-datepicker3.css">
+        <link type="text/css" rel="stylesheet" href="assets/css/spectrum.css">
+        <link type="text/css" rel="stylesheet" href="assets/css/main.css">
+        <link type="text/css" rel="stylesheet" href="assets/css/new-main.css">
+        
+        <!-- Tweaks for older IEs-->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        
+        <!-- Begin Vendor Js -->
+        <script src="assets/vendors/js/base/jquery.min.js"></script>
+        <script src="assets/js/jquery-ui-sortable.js"></script>
+        <script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+        <script src="assets/vendors/js/base/core.js"></script>
+        <!-- End Vendor Js -->
+        
+        <!-- Begin Page Vendor Js -->
+        <script src="assets/vendors/js/nicescroll/nicescroll.min.js"></script>
+        <script src="assets/vendors/js/chart/chart.js"></script>
+        <script src="assets/vendors/js/chart/chartjs-adapter-date-fns.bundle.min.js"></script>
+        <script src="assets/vendors/js/datepicker/moment.min.js"></script>
+        <script src="assets/vendors/js/datepicker/moment-with-locales.js"></script>
+        <script src="assets/vendors/js/datepicker/bootstrap-datepicker.js"></script>
+        <script src="assets/vendors/js/datepicker/bootstrap-datepicker.ko.min.js"></script>
+        <script src="assets/vendors/js/app/app.js"></script>
+        <!-- End Page Vendor Js -->
+        
+        <!-- Begin Page Snippets -->
+        <script src="assets/js/components/validation/validation.js"></script>
+        <script src="assets/js/components/datepicker/datepicker.js"></script>
+        <script src="assets/js/spectrum.js"></script>
+        <script src="assets/js/reset.js"></script>
+        <script src="assets/js/main.js"></script>
+        <!-- End Page Snippets -->
+    </head>
+    <body id="page-top" class="newTheme">
+        <!-- Begin Preloader -->
+        <div id="preloader">
+            <div class="canvas">
+                <img src="assets/img/logo.png" alt="logo" class="loader-logo">
+                <div class="spinner"></div>   
+            </div>
+        </div>
+        <!-- End Preloader -->
+        
+        <div class="page">
+            <!-- Begin Header -->
+            <header id="header" class="header">
+                <nav class="navbar fixed-top">         
+                    <!-- Begin Topbar -->
+                    <div class="navbar-holder d-flex align-items-center align-middle justify-content-between">
+                        <!-- Begin Logo -->
+                        <div class="navbar-header">
+                            <a href="new-index.html" class="navbar-brand">
+                                <div class="brand-image">
+                                    <img src="assets/img/logo-big.png" alt="logo" class="logo-big">
+                                </div>
+                            </a>
+                        </div>
+                        <!-- End Logo -->
+
+                        <!-- Begin Navbar Menu -->
+                        <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center pull-right">
+                            <li class="nav-item dropdown mr-2 nav-title">
+                                <span class="sess-school-name">제주영송학교</span>
+                            </li>
+
+                            <!-- Begin User -->
+                            <li class="nav-item dropdown">
+                                <a id="user" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
+                                    <img src="assets/img/avatar/avatar-01.jpg" alt="..." class="avatar rounded-circle sess-user-img">
+                                </a>
+                                <ul aria-labelledby="user" class="user-size dropdown-menu">
+                                    <li class="welcome">
+                                        <a href="#" class="edit-profil" id="sess-user-link">
+                                            <i class="la la-gear"></i>
+                                        </a>
+                                        <img src="assets/img/avatar/avatar-01.jpg" alt="..." class="rounded-circle sess-user-img">
+                                    </li>
+                                    <li class="userinfo">
+                                        <a href="#" class="dropdown-item"> 
+                                            <span id="sess-user-name">학교관리자</span> 님
+                                        </a>
+                                    </li>
+                                    <li class="userinfo">
+                                        <a href="#" class="dropdown-item"> 
+                                            <span class="sess-school-name">제주영송학교</span>
+                                        </a>
+                                    </li>
+                                    <li class="separator"></li>
+                                    <li>
+                                        <a rel="nofollow" href="javascript:void(0);" class="dropdown-item logout text-center" onclick="location.href='new-login.html';">
+                                            <i class="ti-power-off"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- End User -->
+                        </ul>
+                        <!-- End Navbar Menu -->
+                    </div>
+                    <!-- End Topbar -->
+                </nav>
+            </header>
+            <!-- End Header -->
+            
+            <!-- Begin Page Content -->
+            <div class="page-content d-flex align-items-stretch">
+                <!-- Begin Left Sidebar -->
+                <div id="nav" class="default-sidebar">
+                    <!-- Begin Side Navbar -->
+                    <nav class="side-navbar box-scroll sidebar-scroll">
+                        <!-- Begin Main Navigation -->
+                        <ul class="list-unstyled">
+                            <li><a href="new-user-list.html" data-menu="user"><i class="la la-user"></i><span>계정 관리</span></a></li>
+                            <li><a href="new-school-list.html" data-menu="school"><i class="la la-university"></i><span>학교 관리</span></a></li>
+                            <li><a href="new-bus-list.html" data-menu="bus"><i class="la la-bus"></i><span>버스 관리</span></a></li>
+                            <li><a href="new-student-list.html" data-menu="student"><i class="la la-child"></i><span>학생 관리</span></a></li>
+                            <li><a href="new-survey-list.html" data-menu="survey"><i class="la la-clipboard"></i><span>설문조사 관리</span></a></li>
+                            <li>
+                                <a href="#dropdown-board" aria-expanded="false" data-toggle="collapse"><i class="la la-file-text"></i><span>게시판 관리</span></a>
+                                <ul id="dropdown-board" class="collapse list-unstyled pt-0">
+                                    <li><a href="new-notice-list.html" data-menu="notice">공지사항 관리</a></li>
+                                    <li><a href="new-faq-list.html" data-menu="faq">FAQ 관리</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="new-msgsend-list.html" data-menu="msgsend"><i class="la la-send-o"></i><span>문자발송 관리</span></a></li>
+                            <li><a href="new-stats-list.html" data-menu="stats"><i class="la la-bar-chart"></i><span>통계 관리</span></a></li>
+                            <li><a href="new-log-list.html" data-menu="log"><i class="la la-clock-o"></i><span>로그 관리</span></a></li>
+                        </ul>
+                        <!-- End Main Navigation -->
+                    </nav>
+                    <!-- End Side Navbar -->
+                </div>
+                <!-- End Left Sidebar -->
+                
+                <!-- Begin Content -->
+                <div class="content-inner">
+                    <!-- Begin Container -->
+                    <div class="container-fluid">
+                        <!-- Begin Page Header-->
+                        <div class="row">
+                            <div class="page-header">
+	                            <div class="d-flex align-items-center">
+	                                <h2 class="page-header-title">버스 관리</h2>
+	                                <div>
+			                            <ul class="breadcrumb">
+			                                <li class="breadcrumb-item"><a href="new-index.html"><i class="ti ti-home"></i></a></li>
+			                                <li class="breadcrumb-item active">버스 관리</li>
+			                            </ul>
+	                                </div>
+	                            </div>
+                            </div>
+                        </div>
+                        <!-- End Page Header -->
+                        
+                        <!-- Begin Row -->
+                        <div class="row">
+                            <div class="col">
+                                <!-- page-write-area : 작성 페이지 -->
+                                <div class="widget has-shadow mb-0 page-write-area">
+                                    <div class="widget-body">
+                                        <div class="row align-items-center mb-3">
+                                            <div class="col d-flex">
+                                                <div class="table-title">
+                                                    <b>버스 수정</b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <form id="" name="" method="" action="">
+                                            <div class="table-responsive table-fixed mb-3">
+                                                <table class="table table-bordered mb-0">
+                                                    <colgroup>
+                                                        <col width="140">
+                                                        <col width="*">
+                                                        <col width="140">
+                                                        <col width="*">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>버스번호 *</th>
+                                                            <td class="text-left">
+                                                                <input type="text" id="" name="" class="form-control" required value="제주11가1111">
+                                                                <div class="invalid-feedback">버스번호를 입력해주세요.</div>
+                                                            </td>
+                                                            <th>학교 *</th>
+                                                            <td class="text-left">
+                                                                <select id="" name="" class="custom-select form-control" required>
+                                                                    <option value="">선택안함</option>
+                                                                    <option value="제주영송학교" selected>제주영송학교</option>
+                                                                </select>
+                                                                <div class="invalid-feedback">학교를 선택해주세요.</div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>운행담당자명</th>
+                                                            <td class="text-left">
+                                                                <input type="text" id="" name="" class="form-control" value="영송담당자">
+                                                                <div class="invalid-feedback">운행담당자명을 입력해주세요.</div>
+                                                            </td>
+                                                            <th>연락처</th>
+                                                            <td class="text-left">
+                                                                <input type="tel" id="" name="" class="form-control" value="0641231234">
+                                                                <div class="invalid-feedback">연락처를 입력해주세요.</div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>탑승인원</th>
+                                                            <td class="text-left">
+                                                                <input type="number" id="" name="" class="form-control" min="0" value="0">
+                                                                <div class="invalid-feedback">탑승인원을 입력해주세요.</div>
+                                                            </td>
+                                                            <th></th>
+                                                            <td class="text-left"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>버스마커 *</th>
+                                                            <td colspan="3" class="text-left">
+                                                                <div class="styled-radio">
+                                                                    <input type="radio" name="bus-marker" id="bus-marker-00">
+                                                                    <label for="bus-marker-00"><img src="assets/img/bus/airportbus.png" alt="airportbus"></label>
+                                                                </div>
+                                                                <div class="styled-radio">
+                                                                    <input type="radio" name="bus-marker" id="bus-marker-01">
+                                                                    <label for="bus-marker-01"><img src="assets/img/bus/expressbus.png" alt="expressbus"></label>
+                                                                </div>
+                                                                <div class="styled-radio">
+                                                                    <input type="radio" name="bus-marker" id="bus-marker-02">
+                                                                    <label for="bus-marker-02"><img src="assets/img/bus/gansunbus.png" alt="gansunbus"></label>
+                                                                </div>
+                                                                <div class="styled-radio">
+                                                                    <input type="radio" name="bus-marker" id="bus-marker-03">
+                                                                    <label for="bus-marker-03"><img src="assets/img/bus/jisunbus.png" alt="jisunbus"></label>
+                                                                </div>
+                                                                <div class="styled-radio">
+                                                                    <input type="radio" name="bus-marker" id="bus-marker-04" checked>
+                                                                    <label for="bus-marker-04"><img src="assets/img/bus/schoolbus.png" alt="schoolbus"></label>
+                                                                </div>
+                                                                <div class="styled-radio">
+                                                                    <input type="radio" name="bus-marker" id="bus-marker-05">
+                                                                    <label for="bus-marker-05"><img src="assets/img/bus/tourbus.png" alt="tourbus"></label>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            
+                                            <div class="d-flex justify-content-center">
+                                                <!-- 사용할 경우 삭제 버튼이 노출되고, 사용안할 경우 복구 버튼이 노출됨 -->
+                                                <button type="button" class="btn btn-style03 btn-lg ml-2 mr-2" onclick="openModal('confirm','정말로 삭제하시겠습니까?','');"><span>삭제</span></button>
+                                                <button type="button" class="btn btn-style01 btn-lg ml-2 mr-2" onclick=""><span>확인</span></button>
+                                                <button type="button" class="btn btn-lg ml-2 mr-2" onclick="history.back();"><span>취소</span></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                
+                                <!-- page-map-area : 지도 페이지 -->
+                                <div class="widget has-shadow mt-4 mb-0 page-map-area">
+                                    <div class="widget-body">
+                                        <div class="row align-items-center mb-3">
+                                            <div class="col d-flex">
+                                                <div class="table-title">
+                                                    <b>노선 설정</b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="map-wrap">
+                                            <!-- map-area : 지도 영역 -->
+                                            <div id="map" class="map-area"></div>
+
+                                            <!-- map-left-area : 지도 왼쪽 영역 -->
+                                            <div class="map-left-area on">
+                                                <div class="map-left-main-area">
+                                                    <!-- map-main-route : 노선관리 영역 (학교구분>학교목록>버스목록>노선목록 순으로 노출) -->
+                                                    <div class="map-tab-item map-main-route on" data-tab-type="main" data-tab-name="route">
+                                                        <ul class="map-layer-list">
+                                                            <li class="on">
+                                                                <div class="map-layer-tit">
+                                                                    <div class="view"></div>
+                                                                    <!-- marker-bus : 버스일 경우 마커 -->
+                                                                    <div class="marker marker-bus"></div>
+                                                                    <div class="name">제주11가1111</div>
+                                                                    <!-- 버스일 경우 노선추가 버튼이 노출됨 -->
+                                                                    <button type="button" class="btn btn-style01" onclick="openMapLayer(this,'routeinsert');"><span>노선추가</span></button>
+                                                                </div>
+                                                                <ul>
+                                                                    <li>
+                                                                        <div class="map-layer-tit">
+                                                                            <!-- 노선일 경우 체크박스가 노출됨 -->
+                                                                            <input type="checkbox" name="" id="route-marker-00">
+                                                                            <!-- marker-route : 노선일 경우 마커, style에 설정한 색상 적용 -->
+                                                                            <div class="marker marker-route" style="border-color: rgb(225,83,73);"></div>
+                                                                            <label for="route-marker-00" class="name">영송학교1호(등교)</label>
+                                                                            <!-- 노선일 경우 노선색상, 노선수정 버튼이 노출됨 -->
+                                                                            <div class="input-group">
+                                                                                <button type="button" class="btn btn-style03" onclick="openMapLayer(this,'routecolor');"><span>노선색상</span></button>
+                                                                                <button type="button" class="btn btn-style01" onclick="openRouteUpdate(this);"><span>노선수정</span></button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="map-layer-tit">
+                                                                            <!-- 노선일 경우 체크박스가 노출됨 -->
+                                                                            <input type="checkbox" name="" id="route-marker-01">
+                                                                            <!-- marker-route : 노선일 경우 마커, style에 설정한 색상 적용 -->
+                                                                            <div class="marker marker-route" style="border-color: rgb(213,50,105);"></div>
+                                                                            <label for="route-marker-01" class="name">영송학교1호(하교)</label>
+                                                                            <!-- 노선일 경우 노선색상, 노선수정 버튼이 노출됨 -->
+                                                                            <div class="input-group">
+                                                                                <button type="button" class="btn btn-style03" onclick="openMapLayer(this,'routecolor');"><span>노선색상</span></button>
+                                                                                <button type="button" class="btn btn-style01" onclick="openRouteUpdate(this);"><span>노선수정</span></button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <div class="map-left-sub-area">
+                                                    <!-- map-route-info : 노선정보 및 노선도 영역 -->
+                                                    <div class="map-route-info">
+                                                        <div class="route-info-top">영송학교1호(등교)<span>제주11가1111</span></div>
+                                                        <div class="route-info-detail">
+                                                            <div class="route-info-item">
+                                                                <div class="route-info-con">제주시 동부방면 등교</div>
+                                                            </div>
+                                                            <div class="route-info-item">
+                                                                <div class="route-info-tit">학교</div>
+                                                                <div class="route-info-con">제주영송학교</div>
+                                                            </div>
+                                                            <div class="route-info-item">
+                                                                <div class="route-info-tit">구분</div>
+                                                                <div class="route-info-con">등교</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="route-info-line">
+                                                            <ul class="route-line-list">
+                                                                <li>
+                                                                    <div class="img">
+                                                                        <div class="direction-img"></div>
+                                                                    </div>
+                                                                    <div class="txt">
+                                                                        <div class="station-name">학교출발</div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="img">
+                                                                        <div class="direction-img"></div>
+                                                                        <!-- 버스마커 종류 : marker-bus01/marker-bus02/marker-bus03/marker-bus04/marker-bus05/marker-bus06, move : 이동중인 버스 -->
+                                                                        <div class="bus-img marker-bus05 move">
+                                                                            <div class="bus-num">제주11가1111</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="txt">
+                                                                        <div class="station-name">
+                                                                            <span class="num">1</span>
+                                                                            <span class="name">인제사거리</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="img">
+                                                                        <div class="direction-img"></div>
+                                                                    </div>
+                                                                    <div class="txt">
+                                                                        <div class="station-name">
+                                                                            <span class="num">2</span>
+                                                                            <span class="name">일도이동주민센터</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="img">
+                                                                        <div class="direction-img"></div>
+                                                                    </div>
+                                                                    <div class="txt">
+                                                                        <div class="station-name">
+                                                                            <span class="num">3</span>
+                                                                            <span class="name">자연사박물관</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="img">
+                                                                        <div class="direction-img"></div>
+                                                                    </div>
+                                                                    <div class="txt">
+                                                                        <div class="station-name">
+                                                                            <span class="num">4</span>
+                                                                            <span class="name">시민회관</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="img">
+                                                                        <div class="direction-img"></div>
+                                                                    </div>
+                                                                    <div class="txt">
+                                                                        <div class="station-name">
+                                                                            <span class="num">5</span>
+                                                                            <span class="name">서문시장</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="img">
+                                                                        <div class="direction-img"></div>
+                                                                    </div>
+                                                                    <div class="txt">
+                                                                        <div class="station-name">
+                                                                            <span class="num">6</span>
+                                                                            <span class="name">용담진영마트</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="img">
+                                                                        <div class="direction-img"></div>
+                                                                    </div>
+                                                                    <div class="txt">
+                                                                        <div class="station-name">학교도착</div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- map-route-update : 노선수정 영역 -->
+                                                    <div class="map-route-update">
+                                                        <div class="route-update-tit-area">
+                                                            <div class="route-update-tit">노선수정</div>
+                                                            <button type="button" class="route-update-tit-btn" onclick="closeRouteUpdate(this);">
+                                                                <span>×</span>
+                                                            </button>
+                                                        </div>
+
+                                                        <!-- map-tab-area : 노선정보&정류소정보 탭 영역 -->
+                                                        <div class="map-tab-area">
+                                                            <ul class="map-tab-list">
+                                                                <li data-tab-type="sub" data-tab-name="route">노선정보</li>
+                                                                <li data-tab-type="sub" data-tab-name="station">정류소정보</li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <!-- map-sub-route : 노선정보 영역 -->
+                                                        <div class="map-tab-item map-sub-route" data-tab-type="sub" data-tab-name="route">
+                                                            <div class="route-update-con-area">
+                                                                <div class="table-responsive table-fixed">
+                                                                    <table class="table table-bordered table-sm mb-0">
+                                                                        <colgroup>
+                                                                            <col width="90">
+                                                                            <col width="*">
+                                                                        </colgroup>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <th>노선명 *</th>
+                                                                                <td class="text-left">
+                                                                                    <input type="text" id="" name="" class="form-control" required value="영송학교1호(등교)">
+                                                                                    <div class="invalid-feedback">노선명을 입력해주세요.</div>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>인솔자명</th>
+                                                                                <td class="text-left">
+                                                                                    <input type="text" id="" name="" class="form-control" value="영송인솔자">
+                                                                                    <div class="invalid-feedback">인솔자명을 입력해주세요.</div>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>노선정보</th>
+                                                                                <td class="text-left">
+                                                                                    <input type="text" id="" name="" class="form-control" value="제주시 동부방면 등교">
+                                                                                    <div class="invalid-feedback">노선정보를 입력해주세요.</div>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>구분 *</th>
+                                                                                <td class="text-left">등교</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>연락처 *</th>
+                                                                                <td class="text-left">
+                                                                                    <div class="input-group">
+                                                                                        <input type="tel" id="" name="" class="form-control" required value="0641231234">
+                                                                                        <button type="button" class="btn btn-style02" onclick=""><span>중복확인</span></button>
+                                                                                        <div class="invalid-feedback">연락처를 입력해주세요.</div>
+                                                                                    </div>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                            <div class="route-update-btn-area">
+                                                                <button type="button" class="btn btn-style01 w-50" onclick="">노선정보 저장</button>
+                                                                <button type="button" class="btn btn-style03 w-50" onclick="openModal('confirm','정말로 삭제하시겠습니까?','');">노선 삭제</button>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- map-sub-route : 정류소정보 영역 -->
+                                                        <div class="map-tab-item map-sub-station" data-tab-type="sub" data-tab-name="station">
+                                                            <div class="route-update-con-area">
+                                                                <div class="input-group map-btn-area mb-3">
+                                                                    <a href="javascript:void(0);" class="btn btn-map" onclick="setStationInsert(this);">정류소추가</a>
+                                                                    <a href="javascript:void(0);" class="btn btn-map" onclick="setStationMove(this);">정류소이동</a>
+                                                                    <a href="javascript:void(0);" class="btn btn-style03" onclick="">노선도그리기</a>
+                                                                    <a href="javascript:void(0);" class="btn btn-map" onclick="setRouteEdit(this);">노선도편집</a>
+                                                                </div>
+                                                                <div class="table-responsive table-fixed thead-fixed">
+                                                                    <table class="table table-bordered table-sm mb-0">
+                                                                        <colgroup>
+                                                                            <col width="74">
+                                                                            <col width="*">
+                                                                            <col width="74">
+                                                                        </colgroup>
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>순서</th>
+                                                                                <th>정류소명</th>
+                                                                                <th>관리</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td></td>
+                                                                                <td>학교출발</td>
+                                                                                <td></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                        <!-- station-list : 정류소 목록 -->
+                                                                        <tbody class="station-list">
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div class="station-order">
+                                                                                        <div class="station-num">1</div>
+                                                                                        <div class="station-arrow">
+                                                                                            <a href="javascript:void(0);" class="station-arrow-up" onclick="setStationOrder(this,'up');"><i class="ion-arrow-up-b"></i></a>
+                                                                                            <a href="javascript:void(0);" class="station-arrow-down" onclick="setStationOrder(this,'down');"><i class="ion-arrow-down-b"></i></a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="text" id="" name="" class="form-control" value="인제사거리">
+                                                                                </td>
+                                                                                <td>
+                                                                                    <button type="button" class="btn btn-style03" onclick="setStationDelete(this);"><span>삭제</span></button>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div class="station-order">
+                                                                                        <div class="station-num">2</div>
+                                                                                        <div class="station-arrow">
+                                                                                            <a href="javascript:void(0);" class="station-arrow-up" onclick="setStationOrder(this,'up');"><i class="ion-arrow-up-b"></i></a>
+                                                                                            <a href="javascript:void(0);" class="station-arrow-down" onclick="setStationOrder(this,'down');"><i class="ion-arrow-down-b"></i></a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="text" id="" name="" class="form-control" value="일도이동주민센터">
+                                                                                </td>
+                                                                                <td>
+                                                                                    <button type="button" class="btn btn-style03" onclick="setStationDelete(this);"><span>삭제</span></button>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div class="station-order">
+                                                                                        <div class="station-num">3</div>
+                                                                                        <div class="station-arrow">
+                                                                                            <a href="javascript:void(0);" class="station-arrow-up" onclick="setStationOrder(this,'up');"><i class="ion-arrow-up-b"></i></a>
+                                                                                            <a href="javascript:void(0);" class="station-arrow-down" onclick="setStationOrder(this,'down');"><i class="ion-arrow-down-b"></i></a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="text" id="" name="" class="form-control" value="자연사박물관">
+                                                                                </td>
+                                                                                <td>
+                                                                                    <button type="button" class="btn btn-style03" onclick="setStationDelete(this);"><span>삭제</span></button>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div class="station-order">
+                                                                                        <div class="station-num">4</div>
+                                                                                        <div class="station-arrow">
+                                                                                            <a href="javascript:void(0);" class="station-arrow-up" onclick="setStationOrder(this,'up');"><i class="ion-arrow-up-b"></i></a>
+                                                                                            <a href="javascript:void(0);" class="station-arrow-down" onclick="setStationOrder(this,'down');"><i class="ion-arrow-down-b"></i></a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="text" id="" name="" class="form-control" value="시민회관">
+                                                                                </td>
+                                                                                <td>
+                                                                                    <button type="button" class="btn btn-style03" onclick="setStationDelete(this);"><span>삭제</span></button>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div class="station-order">
+                                                                                        <div class="station-num">5</div>
+                                                                                        <div class="station-arrow">
+                                                                                            <a href="javascript:void(0);" class="station-arrow-up" onclick="setStationOrder(this,'up');"><i class="ion-arrow-up-b"></i></a>
+                                                                                            <a href="javascript:void(0);" class="station-arrow-down" onclick="setStationOrder(this,'down');"><i class="ion-arrow-down-b"></i></a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="text" id="" name="" class="form-control" value="서문시장">
+                                                                                </td>
+                                                                                <td>
+                                                                                    <button type="button" class="btn btn-style03" onclick="setStationDelete(this);"><span>삭제</span></button>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div class="station-order">
+                                                                                        <div class="station-num">6</div>
+                                                                                        <div class="station-arrow">
+                                                                                            <a href="javascript:void(0);" class="station-arrow-up" onclick="setStationOrder(this,'up');"><i class="ion-arrow-up-b"></i></a>
+                                                                                            <a href="javascript:void(0);" class="station-arrow-down" onclick="setStationOrder(this,'down');"><i class="ion-arrow-down-b"></i></a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="text" id="" name="" class="form-control" value="용담진영마트">
+                                                                                </td>
+                                                                                <td>
+                                                                                    <button type="button" class="btn btn-style03" onclick="setStationDelete(this);"><span>삭제</span></button>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td></td>
+                                                                                <td>학교도착</td>
+                                                                                <td></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                            <div class="route-update-btn-area">
+                                                                <button type="button" class="btn btn-style01 w-100" onclick="">정류소정보 저장</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <a href="javascript:void(0);" class="map-left-btn" onclick="setMapLeft(this);">지도 왼쪽 영역 버튼</a>
+                                            </div>
+
+                                            <!-- map-layer-area : 지도 레이어 영역 -->
+                                            <div class="map-layer-area">
+                                                <!-- map-routeinsert-layer : 노선추가 레이어창 -->
+                                                <div class="map-layer map-routeinsert-layer">
+                                                    <div class="map-layer-box">
+                                                        <div class="map-layer-tit-area">
+                                                            <div class="map-layer-tit">노선추가</div>
+                                                            <button type="button" class="map-layer-tit-btn" onclick="closeMapLayer(this);">
+                                                                <span>×</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="map-layer-con-area">
+                                                            <div class="table-responsive table-fixed">
+                                                                <table class="table table-bordered table-sm mb-0">
+                                                                    <colgroup>
+                                                                        <col width="90">
+                                                                        <col width="*">
+                                                                    </colgroup>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th>노선명 *</th>
+                                                                            <td class="text-left">
+                                                                                <input type="text" id="" name="" class="form-control" required>
+                                                                                <div class="invalid-feedback">노선명을 입력해주세요.</div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>인솔자명</th>
+                                                                            <td class="text-left">
+                                                                                <input type="text" id="" name="" class="form-control">
+                                                                                <div class="invalid-feedback">인솔자명을 입력해주세요.</div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>노선정보</th>
+                                                                            <td class="text-left">
+                                                                                <input type="text" id="" name="" class="form-control">
+                                                                                <div class="invalid-feedback">노선정보를 입력해주세요.</div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>구분 *</th>
+                                                                            <td class="text-left">
+                                                                                <div class="styled-radio">
+                                                                                    <input type="radio" name="route-kind" id="route-kind-goschool" checked>
+                                                                                    <label for="route-kind-goschool">등교</label>
+                                                                                </div>
+                                                                                <div class="styled-radio">
+                                                                                    <input type="radio" name="route-kind" id="route-kind-gohome">
+                                                                                    <label for="route-kind-gohome">하교</label>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>연락처 *</th>
+                                                                            <td class="text-left">
+                                                                                <div class="input-group">
+                                                                                    <input type="tel" id="" name="" class="form-control" required>
+                                                                                    <button type="button" class="btn btn-style02" onclick=""><span>중복확인</span></button>
+                                                                                    <div class="invalid-feedback">연락처를 입력해주세요.</div>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <div class="map-layer-btn-area">
+                                                            <button type="button" class="btn btn-style03 w-100" onclick=""><span>확인</span></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- map-routecolor-layer : 노선색상 레이어창 -->
+                                                <div class="map-layer map-routecolor-layer">
+                                                    <div class="map-layer-box">
+                                                        <div class="map-layer-tit-area">
+                                                            <div class="map-layer-tit">노선색상</div>
+                                                            <button type="button" class="map-layer-tit-btn" onclick="closeMapLayer(this);">
+                                                                <span>×</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="map-layer-con-area">
+                                                            <div class="table-responsive table-fixed">
+                                                                <table class="table table-bordered table-sm mb-0">
+                                                                    <colgroup>
+                                                                        <col width="90">
+                                                                        <col width="*">
+                                                                    </colgroup>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th>색상</th>
+                                                                            <td class="text-left">
+                                                                                <input type="text" id="" name="" class="form-control color-control">
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>투명도</th>
+                                                                            <td class="text-left">
+                                                                                <div class="opacity-group">
+                                                                                    <input type="range" id="" name="" class="opacity-control" min="0.0" max="1.0" step="0.1" value="1.0" onchange="setOpacityChange(this);">
+                                                                                    <input type="text" id="" name="" class="form-control" readonly>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <div class="map-layer-btn-area">
+                                                            <button type="button" class="btn btn-style03 w-100" onclick=""><span>확인</span></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Row -->
+                    </div>
+                    <!-- End Container -->
+                    
+                    <!-- Begin Page Footer-->
+                    <footer id="footer" class="main-footer">
+                        <div class="row">
+                            <div class="col d-flex align-items-center justify-content-start">
+                                <p>© 안전통학 정보 서비스. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- End Page Footer -->
+                    
+                    <!-- Begin Go Top -->
+                    <a href="#" class="go-top"><i class="la la-arrow-up"></i></a>
+                    <!-- End Go Top -->
+                </div>
+                <!-- End Content -->
+            </div>
+            <!-- End Page Content -->
+        </div>
+        
+        <!-- Begin Modal -->
+        <div id="modal">
+            <!-- Begin Centered Modal (Alert) -->
+            <div id="modal-centered-alert" class="modal fade modal-centered-default">
+                <div class="modal-background"></div>
+                <div class="modal-dialog modal-sm modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="modal-body-text mt-3 mb-3"></div>
+                        </div>
+                        <div class="modal-footer justify-content-center p-0">
+                            <button type="button" class="btn btn-style01 w-100 m-0 btn-confirm" data-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" id="modal-centered-alert-btn" class="btn btn-hidden" data-toggle="modal" data-target="#modal-centered-alert">보기</button>
+            <!-- End Centered Modal (Alert) -->
+
+            <!-- Begin Centered Modal (Confirm) -->
+            <div id="modal-centered-confirm" class="modal fade modal-centered-default">
+                <div class="modal-background"></div>
+                <div class="modal-dialog modal-sm modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="modal-body-text mt-3 mb-3"></div>
+                        </div>
+                        <div class="modal-footer justify-content-center p-0">
+                            <button type="button" class="btn btn-style01 w-50 m-0 btn-confirm" data-dismiss="modal">확인</button>
+                            <button type="button" class="btn btn-style03 w-50 m-0 btn-cancel" data-dismiss="modal">취소</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" id="modal-centered-confirm-btn" class="btn btn-hidden" data-toggle="modal" data-target="#modal-centered-confirm">보기</button>
+            <!-- End Centered Modal (Confirm) -->
+        </div>
+        <!-- End Modal -->
+    </body>
+</html>
